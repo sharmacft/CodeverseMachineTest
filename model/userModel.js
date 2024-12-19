@@ -7,13 +7,19 @@ const userSchema = new mongoose.Schema({
         type: String,
         unique: true,
     },
-    phoneNumber: {
+    phone: {
         type: String,
     },
     age: {
         type: Number
     },
-    profileImg: {
+    username: {
+        type: String
+    },
+    password: {
+        type: String
+    },
+    profilePicture: {
         type: String,
     },
     createdBy: {
@@ -27,10 +33,7 @@ const userSchema = new mongoose.Schema({
         type: Number,
         default: 1
     },
-    role: {
-        type: Number,
-        default: 0
-    },
+
     otp: {
         type: Number,
     },

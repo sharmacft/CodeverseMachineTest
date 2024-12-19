@@ -1,19 +1,19 @@
 import mongoose from 'mongoose';
-const userSchema = new mongoose.Schema({
-    bookName: {
+const bookSchema = new mongoose.Schema({
+    name: {
         type: String,
     },
-    authorName: {
+    author: {
         type: String,
         unique: true,
     },
     price: {
         type: String,
     },
-    discription: {
+    description: {
         type: String,
     },
-    createdBy: {
+    quantity: {
         type: String
     },
     isDeleted: {
@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema({
     },
 }, { timestamps: true });
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model('Book', bookSchema);
 export default User;
 
 
